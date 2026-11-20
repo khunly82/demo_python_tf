@@ -59,8 +59,16 @@
 from random import randint
 from timeit import timeit
 
-l = [randint(0, 1_000_000) for _ in range(1_000_000)]
-s = {randint(0, 1_000_000) for _ in range(1_000_000)}
+l = [randint(0, 1_000_000_000_000) for _ in range(1_000_000)]
+s = {randint(0, 1_000_000_000_000) for _ in range(1_000_000)}
 
-print(timeit(lambda : 42 in l, number=1))
-print(timeit(lambda : 42 in s, number=1)) # 6000 fois plus rapide!
+print(len(l))
+print(len(s))
+
+duree_l = timeit(lambda : 42 in l, number=10)
+duree_s = timeit(lambda : 42 in s, number=10)
+
+print(duree_l)
+print(duree_s)
+
+print(f'{duree_l/duree_s:.0f} fois plus rapide de chercher dans un set')
