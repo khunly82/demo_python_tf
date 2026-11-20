@@ -34,3 +34,23 @@ print(metier)
 promotion = None
 prix = 50
 print(prix - (prix * (promotion or 0) / 100))
+
+a = True
+b = True
+
+if a ^ b:
+    print('On ne peut pas etre vrai en meme temps')
+if a or b:
+    print('Un peut etre vrai') 
+
+# Falsy / Truthy
+nom = ''
+if nom:
+    print(nom)
+
+print(not not True)
+print(not not 'Khun') # True car 'Khun' est truthy
+print(not not '') # False car '' est falsy
+print(not not 0) # False
+print(not not []) # False
+print(not not None) # False
