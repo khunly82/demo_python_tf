@@ -54,3 +54,4 @@ print(not not '') # False car '' est falsy
 print(not not 0) # False
 print(not not []) # False
 print(not not None) # False
+

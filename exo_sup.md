@@ -1,0 +1,1 @@
+1. Ecrire un code python qui recupére la date et l'heure courante "import datetime" et qui affiche "il reste x minutes avant la pause" s'il est moins de 10h sinon "Super c'est la pause"
